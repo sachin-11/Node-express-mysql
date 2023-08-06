@@ -44,3 +44,39 @@ Response:
 
 If product prices are found for the specified product_id, the response will include an array of prices along with their product names and associated user information.
 If no prices are found or the product_id does not exist, a 404 Not Found error will be returned.
+
+
+{
+  "prices": [
+    {
+      "price": 10.99,
+      "product_name": "Product 1",
+      "user_name": "John Doe",
+      "user_email": "john@example.com"
+    },
+    {
+      "price": 19.99,
+      "product_name": "Product 1",
+      "user_name": "John Doe",
+      "user_email": "john@example.com"
+    }
+  ]
+}
+
+2. Get Price of a Product by Product ID
+URL: /product-price/:product_id
+
+Method: GET
+
+Params:
+
+product_id: The ID of the product for which the price is requested.
+Response:
+
+If a price is found for the specified product_id, the response will include the price of the product.
+If no price is found or the product_id does not exist, a 404 Not Found error will be returned.
+json
+Copy code
+{
+  "price": 10.99
+}
